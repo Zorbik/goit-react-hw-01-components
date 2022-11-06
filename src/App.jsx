@@ -1,9 +1,11 @@
 import './App.css';
-import { Profile } from './components/Profile/Profile';
 import user from './components/Profile/user.json';
-import data from './components/Statistics/data.json'
+import data from './components/Statistics/data.json';
+import friends from './components/FriendList/friends.json';
 import { Box } from './components/Box';
 import { Statistics } from './components/Statistics/Statistics';
+import { Profile } from './components/Profile/Profile';
+import { FriendList } from './components/FriendList/FriendList'
 
 export function App() {
   return (
@@ -18,6 +20,9 @@ export function App() {
       <Statistics
         title={"Upload stats"}
         stats={data}
+      />
+      <FriendList
+      friends={friends}
       />
     </Box>
   );
