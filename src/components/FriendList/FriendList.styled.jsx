@@ -5,12 +5,12 @@ export const FriendListItem = styled.li`
     display: flex;
     align-items: center;
     padding: ${p => p.theme.space[4]}px;
-    margin-top: ${p => p.theme.space[3]}px;
     box-shadow: ${p => p.theme.shadows.normal};
     gap: ${p => p.theme.space[4]}px;
     border-radius: ${p => p.theme.radii.normal};
-
-
+    &:not(:first-child) {
+        margin-top: ${p => p.theme.space[3]}px;
+    }
 `;
 
 export const FriendIsOnline = styled.span`
