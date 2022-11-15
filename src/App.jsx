@@ -11,16 +11,18 @@ import { TransactionHistory } from './components/TransactionHistory/TransactionH
 
 export function App() {
   return (
-    <Box>
-      <Profile
-        name={user.username}
-        tag={user.tag}
-        location={user.location}
-        avatar={user.avatar}
-        stats={user.stats}
-      />
-      <Statistics title={'Upload stats'} stats={data} />
-      <FriendList friends={friends} />
+    <Box display="flex" flexWrap="wrap" p={5}>
+      <Box display="flex" flexDirection="column">
+        <Profile
+          name={user.username}
+          tag={user.tag}
+          location={user.location}
+          avatar={user.avatar}
+          stats={user.stats}
+        />
+        <Statistics title={'Upload stats'} stats={data} />
+        <FriendList friends={friends} />
+      </Box>
       <TransactionHistory items={transactions} />
     </Box>
   );
